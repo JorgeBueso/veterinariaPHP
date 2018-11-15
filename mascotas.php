@@ -7,7 +7,14 @@
     </div>
     
 </div>
-
+<script>
+    
+    $('#botonVueltaIndex').click(function()
+        {
+             $("#principal").load("indexVeterinaria.php");
+        });
+        
+</script>
 
 
 <?php
