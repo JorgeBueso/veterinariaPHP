@@ -1,17 +1,15 @@
 
 <div class="container" id ="principal">
+   
     <div>
-        
-         <button  id="botonVueltaIndex" class="btn btn-primary btn-block" type="submit">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</button>
-         
-         <php>
-             
-             
-             
-         </php>
+        <button id="botonVueltaIndex" class="btn btn-primary " type="submit">Login</button>
+        <button id="botonClientes" >Clientes</button> 
+        <button  Class="alert-info">Mascotas</button>          
     </div>
-    
+   
 </div>
+
+
 <script>
     
     $('#botonVueltaIndex').click(function()

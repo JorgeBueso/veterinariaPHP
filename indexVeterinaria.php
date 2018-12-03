@@ -24,12 +24,12 @@
            <div class="row">
                 
                  <!--columna izquierda-->
-                <div class="col-4" style="">
+                <div class="col-4">
                     <img src="tornillo.jpg" >
                  </div>   
                 <!--columna central-->                
                 <div class="col-12 align-content-center" style="color: black ; background-color: khaki " >      
-                    <h2> INGRESE SU USUARIO Y SU CONTRASEÑA     </h2> 
+                    <h2 class="text-center"> INGRESE SU USUARIO Y SU CONTRASEÑA</h2> 
                    </div>  
                     
                   
@@ -57,11 +57,15 @@
 
                             <input id="cajaNombre" class="form-control" type="text" placeholder="USUARIO" required="required">
                             <br>
-                            <input id="cajaPassword" class="form-control" type="password" placeholder="<?php echo $bbdd;?>">
+                            <input id="cajaPassword" class="form-control" type="password" placeholder="CONTRASEÑA">
                             <br>
+                            <br>                            
                             <button  id="botonMascotas" class="btn btn-primary btn-block" type="submit">ENTRAR</button>
+                            
+                            <button  id="botonRegistroMascotas" class="btn btn-primary btn-block" type="submit">REGISTRA MASCOTAS</button>
                             <br>
-
+                            <button  id="botonRegistroUsuarios" class="btn btn-primary btn-block" type="submit">REGISTRA CLIENTES</button>
+                            <br>
                     </div>
                     
                  
@@ -81,12 +85,29 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
     
     <script>
-        
-        $('#botonMascotas').click(function()
+         $('#botonMascotas').click(function()
         {
-             $("#principal").load("mascotas.php");
-     });        
+            //leo el contenido de las cajas de nombre y de contraseña
+            var _nombre = $('#cajaNombre').val();
+            var _password = $('#cajaPassword').val();
+           
+            $("#principal").load("Clientes.php",
+            {
+                nami :_nombre,
+                password : _password
+            });
+        });
+            
+    
+    $('#botonRegistroMascotas').click(function()
+        {
+             $("#principal").load("registroAnimales.php");
+     });  
      
+     $('#botonRegistroUsuarios').click(function()
+        {
+             $("#principal").load("registraClientes.php");
+     });   
      //
      //CARROUSEL DE FONDO
      //
