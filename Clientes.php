@@ -3,12 +3,16 @@
     
 <div class="tabla-contenedor">
     
-    <form action="registraClientes.php" method="post">
-        
+    <form action="mascotas.php" method="post">    
+    <button style="background-color: transparent; 
+                border-color: transparent" class="btn btn-outline-danger" >MASCOTAS</button>
+   
+    
+    <form action="registraClientes.php" method="post">               
         <button style="background-color: transparent; 
-                border-color: transparent" class="btn btn-outline-primary" >registroClientes</button>
-        
+                border-color: transparent" class="btn btn-outline-primary" >REGISTROCLIENTES</button>
     </form>
+    
 
 
 <table class="table" style="color: white">

@@ -1,11 +1,15 @@
 <div class="contenedor" style="background: rgba(0,0,0,.9); border-radius: 50px; padding:25px; display:flex; flex-direction: row; justify-content: center; align-items: center;">
 
 <div class="tabla-contenedor">
-    <form action="registroAnimales.php" method="post">
-        
+    
+    <form action="Clientes.php" method="post">    
+    <button style="background-color: transparent; 
+                border-color: transparent" class="btn btn-outline-danger" >clientes</button>
+   </form>
+    
+    <form action="registroAnimales.php" method="post">               
         <button style="background-color: transparent; 
                 border-color: transparent" class="btn btn-outline-primary" >registroMascotas</button>
-        
     </form>
     
 
