@@ -4,15 +4,16 @@
 <div class="tabla-contenedor">
     
     <form action="mascotas.php" method="post">    
-    <button style="background-color: transparent; 
+        <button style="background-color: #ffffff; 
                 border-color: transparent" class="btn btn-outline-danger" >MASCOTAS</button>
    
-    
-    <form action="registraClientes.php" method="post">               
-        <button style="background-color: transparent; 
+     </form>
+         <form action="registraClientes.php" method="post">               
+            <button style="background-color: #ffffff; 
                 border-color: transparent" class="btn btn-outline-primary" >REGISTROCLIENTES</button>
-    </form>
+          </form>
     
+   
 
 
 <table class="table" style="color: white">

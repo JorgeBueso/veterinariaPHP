@@ -3,12 +3,12 @@
 <div class="tabla-contenedor">
     
     <form action="Clientes.php" method="post">    
-    <button style="background-color: transparent; 
+    <button style="background-color: ffffff; 
                 border-color: transparent" class="btn btn-outline-danger" >clientes</button>
    </form>
     
     <form action="registroAnimales.php" method="post">               
-        <button style="background-color: transparent; 
+        <button style="background-color: ffffff; 
                 border-color: transparent" class="btn btn-outline-primary" >registroMascotas</button>
     </form>
     

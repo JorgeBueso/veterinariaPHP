@@ -60,7 +60,7 @@
                             <input id="cajaPassword" class="form-control" type="password" placeholder="CONTRASEÑA">
                             <br>
                             <br>                            
-                            <button  id="botonRegistro" class="btn btn-primary btn-block" type="submit">ENTRAR</button>
+                            <button  id="botonRegistro" class="btn btn-primary btn-block" type="submit">CLIENTES</button>
                             <br>
                             <button  id="botonMascotas" class="btn btn-primary btn-block" type="submit">MASCOTAS</button>
                             <br>
