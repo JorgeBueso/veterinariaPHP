@@ -1,19 +1,20 @@
 <?php
 
 include 'funciones.php';
-$id_usuario = $_POST["id"];
+
 $dni = $_POST["dni"];
 $nombre = $_POST["nombre"];
-$apellidos = $_POST["apellidos"];
+$apellidos = $_POST["apellido"];
 $telefono = $_POST["telefono"];
 
 
-$mysql = conectaBBDD();
 
-$insertar = "INSERT INTO clientes (id,dni, nombre, apellidos, telefono) VALUES ('$id_usuario',$dni', '$nombre', '$apellidos', '$telefono')";
+$dni = (int) $dni;
+$telefono = (int) $telefono;
 
+$conexion = conectaBBDD();
 
-$verificar_usuario = mysqli_query($conexion, "SELECT * FROM cliente WHERE id = '$id_usuario'");
+$insertar = "INSERT INTO clientes (dni, nombre, apellidos, telefono) VALUES ('$dni', '$nombre', '$apellidos', '$telefono');";
 
 
 $resultado = mysqli_query($conexion, $insertar);
@@ -26,6 +27,3 @@ if (!$resultado)
     echo 'Usuario registrado correctamente';
     
 }
-
-
- 

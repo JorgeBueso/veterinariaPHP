@@ -1,59 +1,40 @@
-<div class="row">
+<div class="container" id ="principal">
+     
+     
+    <!--parte medio-->
+    <div class="row justify-content-center" >
                 
-                 <!--columna izquierda-->
-                <div class="col-4" style="">
-                    
-                 </div>   
-            <div class ="row justify-content-center">
-                <h2></h2>
-                
-                <div class="col-10" style="background: #138496">
+               
+        <!--caja del login-->
+                 
+                                 
+        <div class="col-1 justify-content-center "  style="background: #138496">
+                        
+            <form action="registraFuncionesAnimales.php" method="post">
+                <h3>DATOS DE LA MASCOTA</h3>
+                    <input id ="cajaNombreMascota" name="chip" class="form-control" type="text" placeholder="chip" required="required">
                     <br/>
-                    
+                    <input id ="cajaNombreMascota" name="nombre" class="form-control" type="text" placeholder="NombreMascota" required="required">
                     <br/>
+                    <input id ="cajaRaza" name="raza" class="form-control" type="text" placeholder="Raza">
+                    <br/>
+                    <input id ="cajaEspecie" name="especie" class="form-control" type="text" placeholder="Especie">
+                    <br/>
+                    <input id ="cajaSexo" name="sexo" class="form-control" type="text" placeholder="Sexo">
+                    <br/>                          
+                    <input id ="cajaFecha" name="fecha" class="form-control" type="datetime" placeholder="FechaNacimiento">
+                    <br/>                    
+                    <button id="botonMascotas" class="btn btn-success btn-block" type="submit">REGISTRAR MASCOTA</button>                    
+                    <button id="botonVueltaIndex" class="btn btn-outline-light btn-block" type="reset">CANCELAR</button>
+                    <br/>
+            </form>
+                            
+        </div>
+                    
+                 
                    
-                        <h3>DATOS DE LA MASCOTA</h3>
-                        <input id ="cajaNombreMascota" class="form-control" type="text" placeholder="NombreMascota" required="required">
-                        <br/>
-                        <input id ="cajaRaza" class="form-control" type="password" placeholder="Raza">
-                        <br/>
-                        <input id ="cajaSexo" class="form-control" type="password" placeholder="Sexo">
-                        <br/>    
-                        <input id ="cajaChip" class="form-control" type="text" placeholder="Chip" required="required">
-                        <br/>
-                        <input id ="cajaFecha" class="form-control" type="password" placeholder="FechaNacimiento">
-                        <br/>
-                        <button id="botonMascotas" class="btn btn-success btn-block" type="submit">REGISTRAR MASCOTA</button>                    
-                        <button id="botonVueltaIndex" class="btn btn-outline-light btn-block" type="submit">CANCELAR</button>
-                        <br/>
-                </div>
-                <div class="col-4">
-                </div>
-            </div>
+                                
+               
+    </div>
+    
 </div>
-    <script> 
-        $('#boton1').click(function(){
-            //leo el contenido de las cajas de nombre y contraseña
-            var _cajaNombre = $('#cajaNombre').val();
-            var _cajaPassword = $('#cajaPassword').val();
-            var _cajaPassword2 = $('#cajaPassword2').val();
-            if (_cajaPassword != _cajaPassword2){
-                alert('LAS CONTRASEÑAS NO COINCIDEN');
-            }
-            else{
-                $('#principal').load("registra_2.php",{
-                    cajaNombre : _cajaNombre,
-                    cajaPassword : _cajaPassword
-                });
-            }
-        });
-        
-    $('#botonVueltaIndex').click(function()
-        {
-             $("#principal").load("indexVeterinaria.php");
-        });
-         $('#botonMascotas').click(function()
-        {
-             $("#principal").load("mascotas.php");
-     });   
-    </script> 

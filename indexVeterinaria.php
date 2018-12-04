@@ -60,12 +60,12 @@
                             <input id="cajaPassword" class="form-control" type="password" placeholder="CONTRASEÑA">
                             <br>
                             <br>                            
-                            <button  id="botonMascotas" class="btn btn-primary btn-block" type="submit">ENTRAR</button>
+                            <button  id="botonRegistro" class="btn btn-primary btn-block" type="submit">ENTRAR</button>
+                            <br>
+                            <button  id="botonMascotas" class="btn btn-primary btn-block" type="submit">MASCOTAS</button>
+                            <br>
+
                             
-                            <button  id="botonRegistroMascotas" class="btn btn-primary btn-block" type="submit">REGISTRA MASCOTAS</button>
-                            <br>
-                            <button  id="botonRegistroUsuarios" class="btn btn-primary btn-block" type="submit">REGISTRA CLIENTES</button>
-                            <br>
                     </div>
                     
                  
@@ -73,19 +73,22 @@
                                 
                
             </div>
-             
+    
+        </div>
   
             
             
         
        
     </body>
+    
+    
     <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
      <script src="js/bootstrap.min.js" type="text/javascript"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
     
     <script>
-         $('#botonMascotas').click(function()
+         $('#botonRegistro').click(function()
         {
             //leo el contenido de las cajas de nombre y de contraseña
             var _nombre = $('#cajaNombre').val();
@@ -99,15 +102,14 @@
         });
             
     
-    $('#botonRegistroMascotas').click(function()
+    $('#botonMascotas').click(function()
         {
-             $("#principal").load("registroAnimales.php");
+             $("#principal").load("mascotas.php");
      });  
      
-     $('#botonRegistroUsuarios').click(function()
-        {
-             $("#principal").load("registraClientes.php");
-     });   
+       
+     
+     
      //
      //CARROUSEL DE FONDO
      //
@@ -133,6 +135,10 @@
     {
 
        $('body').css("background-image", 'url(' + listaimg[numImag] + ')');
+       $('body').css("background-size", 'cover');
+       $('body').css("background-repeat", 'no-repeat');
+       $('body').css("background-position", 'center center');
+       $('body').css("background-attachment", 'fixed');
 
        numImag++;
        

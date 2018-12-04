@@ -1,28 +1,49 @@
-<table border="1" cellspacing=1 cellpadding=2 style="font-size: 8pt"><tr>
-<td><font face="arial"><b>DNI</b></font></td>
-<td><font face="arial"><b>Nombre</b></font></td>
-<td><font face="arial"><b>Apellido</b></font></td>
-<td><font face="arial"><b>Telefono</b></font></td>
-</tr>
- 
- <?php
-$sql="SELECT * from Clientes";
-$result = mysql_query($funciones::conectaBBDD, $query); 
-while($mostrar =mysql_fetch_array($result))
-  {
- 
-    echo "<tr><td width=\"25%\"><font face=\"verdana\">" . 
-	    $row["DNI"] . "</font></td>";
-    echo "<td width=\"25%\"><font face=\"verdana\">" . 
-	    $row["Nombre"] . "</font></td>";
-    echo "<td width=\"25%\"><font face=\"verdana\">" . 
-	    $row["Apellido"] . "</font></td>";
-    echo "<td width=\"25%\"><font face=\"verdana\">" . 
-	    $row["Telefono"]. "</font></td></tr>";    
-    $numero++;
+<div class="contenedor" style="background: rgba(0,0,0,.9); border-radius: 50px; padding:25px; display:flex; flex-direction: row; justify-content: center; align-items: center;">
+  
     
+<div class="tabla-contenedor">
+    
+    <form action="registraClientes.php" method="post">
+        
+        <button style="background-color: transparent; 
+                border-color: transparent" class="btn btn-outline-primary" >registroClientes</button>
+        
+    </form>
+
+
+<table class="table" style="color: white">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">DNI</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">Telefono</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  <?php
+ require_once('./funciones.php');
+$sql="SELECT * from Clientes";
+$result = mysqli_query(conectaBBDD(), $sql); 
+while($mostrar =mysqli_fetch_array($result))
+  {
+    echo "<tr><td width=\"25%\"><font face=\"verdana\">" . 
+	    $mostrar["dni"] . "</font></td>";
+    echo "<td width=\"25%\"><font face=\"verdana\">" . 
+	    $mostrar["nombre"] . "</font></td>";
+    echo "<td width=\"25%\"><font face=\"verdana\">" . 
+	    $mostrar["apellidos"] . "</font></td>";
+    echo "<td width=\"25%\"><font face=\"verdana\">" . 
+      $mostrar["telefono"]. "</font></td></tr>";    
   }
 
 
 ?>
+  </tbody>
 </table>
+
+</div>
+
+
+</div>
